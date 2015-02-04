@@ -17,10 +17,6 @@
             <url>http://repo.onarandombox.com/content/groups/public</url>
         </repository>
         <repository>
-            <id>Bukkit Official</id>
-            <url>http://repo.bukkit.org/content/repositories/public</url>
-        </repository>
-        <repository>
             <id>sk89q-repo</id>
             <url>http://maven.sk89q.com/repo/</url>
         </repository>
@@ -151,6 +147,15 @@
     </build>
     <dependencies>
 
+    <!-- Start of Bukkit Dep -->
+        <dependency>
+        <groupId>org.bukkit</groupId>
+        <artifactId>bukkit</artifactId>
+        <version>1-8</version>
+        <scope>system</scope>
+        <systemPath>${basedir}/spigot-1.8.jar</systemPath>
+    </dependency>
+
         <!-- Start of Multiverse Core Dependency -->
         <dependency>
             <groupId>com.onarandombox.multiversecore</groupId>
@@ -158,6 +163,17 @@
             <version>2.5</version>
             <type>jar</type>
             <scope>compile</scope>
+        <exclusions>
+                <exclusion>
+                    <groupId>org.bukkit</groupId>
+                    <artifactId>bukkit</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.bukkit</groupId>
+                    <artifactId>craftbukkit</artifactId>
+                </exclusion>
+            </exclusions>
+
         </dependency>
         <!-- End of Multiverse Core Dependency -->
 
@@ -173,6 +189,10 @@
                     <groupId>org.bukkit</groupId>
                     <artifactId>bukkit</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>org.bukkit</groupId>
+                    <artifactId>craftbukkit</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <!-- End of WorldEdit Dependency -->
@@ -184,6 +204,16 @@
             <version>1.0.6</version>
             <type>jar</type>
             <scope>compile</scope>
+        <exclusions>
+                <exclusion>
+                    <groupId>org.bukkit</groupId>
+                    <artifactId>bukkit</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.bukkit</groupId>
+                    <artifactId>craftbukkit</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!-- End of Logging Dependency -->
 
