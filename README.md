@@ -1,3 +1,15 @@
+This is a fork of Multiverse-Portals with the following fixes:
+
+- WorldEdit 6 integration and portal creation bugfix (courtesy of https://github.com/TWSSYesterday/Multiverse-Portals/commit/c7822c0f8fb85a4ac6b85258bcfa85df149c48b2 )
+- POM corrections and builds using Spigot (courtesy of KJ4IPS)
+
+# Compiling
+
+* Build Spigot and copy the resulting spigot-1.8.jar into this root folder
+* Run `mvn clean package`
+
+# License
+
 Copyright (c) 2011, The Multiverse Team All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
