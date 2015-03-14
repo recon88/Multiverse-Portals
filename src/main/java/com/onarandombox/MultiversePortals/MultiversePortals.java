@@ -59,7 +59,6 @@ import com.pneumaticraft.commandhandler.multiverse.CommandHandler;
 public class MultiversePortals extends JavaPlugin implements MVPlugin {
 
     private static final String logPrefix = "[Multiverse-Portals] ";
-    protected static DebugLog debugLog;
     private MultiverseCore core;
 
     private FileConfiguration MVPPortalConfig;
@@ -111,7 +110,6 @@ public class MultiversePortals extends JavaPlugin implements MVPlugin {
         }
         // Turn on Logging and register ourselves with Core
         getLogger().info(logPrefix + "- Version " + this.getDescription().getVersion() + " Enabled - By " + getAuthors());
-        debugLog = new DebugLog("Multiverse-Portals", getDataFolder() + File.separator + "debug.log");
         this.core.incrementPluginCount();
 
         // Register our commands
